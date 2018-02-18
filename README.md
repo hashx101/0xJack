@@ -28,10 +28,13 @@ for one-time transactions."
 # How to run the project?
 set up the ethereum-testrpc network:
 ```
-> yarn testrpc
+yarn testrpc
 ```
 
 use another terminal to start:
 ```
-> npm start
+npm start
 ```
+# Demo
+[![0xJack Demo](https://img.youtube.com/vi/fWCoM3PwNTY/0.jpg)](https://www.youtube.com/watch?v=fWCoM3PwNTY)
+
