@@ -1,0 +1,40 @@
+{
+    "name": "0xJack",
+    "version": "0.1.0",
+    "description": "",
+    "main": "lib/src/index.js",
+    "types": "lib/src/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "npm run build; node ./lib/index.js",
+        "clean": "shx rm -rf _bundles lib",
+        "lint": "tslint src/**/*.ts",
+        "download_snapshot": "download --extract --strip 1 --out 0x_testrpc_snapshot ${npm_package_config_snapshot_url}",
+        "testrpc": "testrpc -p 8545 --networkId 50 --db ./0x_testrpc_snapshot -m \"${npm_package_config_mnemonic}\""
+    },
+    "license": "Apache-2.0",
+    "config": {
+        "mnemonic": "concert load couple harbor equip island argue ramp clarify fence smart topic",
+        "snapshot_url": "https://s3.amazonaws.com/testrpc-shapshots/07d00cc515e0f9825b81595386b358593b7a3d6f.zip"
+    },
+    "devDependencies": {
+        "@types/node": "^8.0.53",
+        "download-cli": "^1.0.5",
+        "ethereumjs-testrpc": "^6.0.3",
+        "shx": "^0.2.2",
+        "tslint": "5.8.0",
+        "typescript": "2.7.1",
+        "web3-typescript-typings": "^0.9.9"
+    },
+    "dependencies": {
+        "0x.js": "^0.32.4",
+        "@0xproject/tslint-config": "^0.4.9",
+        "@0xproject/utils": "^0.3.2",
+        "aqueduct": "^1.1.3",
+        "connect": "^3.6.6",
+        "express": "^4.16.2",
+        "serve-static": "^1.13.2",
+        "web3": "^0.20.0",
+        "ws": "^4.0.0"
+    }
+}

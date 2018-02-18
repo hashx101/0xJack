@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>0xJack</title>
+	<link href="style.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<script src="js/web3.min.js"></script>
+
+	<script src="js/tether.min.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+	<script src="server.js"></script>
+	<script src="js/0x.js"></script>
+	<script src="js/blackjack.js"></script>
+
+	<!--
+	<script src="index.ts"></script>
+-->
+</head>
+<body>
+	<nav class="navbar navbar-light" style="background-color: #f39898">
+  <a class="navbar-brand" href="index.html" style='color: #fff'>
+    <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+		0xJack
+	</a>
+</nav>
+
+	<div class='page'>
+
+				<h5>{Dealer}</h5>
+        <div class='dealer-cards'>
+
+            <div class='card card1'></div>
+
+            <div class='card flipped card2'></div>
+
+            <div class='new-cards'></div>
+
+        	<div id='dealerTotal' class='dealer-total'></div>
+					<div class='clear'></div>
+
+        </div>
+
+        <div class='clear'></div>
+
+				<h5>{You}</h5>
+        <div class='player-cards'>
+
+            <div class='card card1'></div>
+
+            <div class='card card2'></div>
+
+            <div class='new-cards'></div>
+
+        		<div class='clear'></div>
+
+
+        </div>
+
+				<div id='playerTotal' class='player-total'></div>
+
+
+        <div class="buttons">
+        	<button type='button' class='btn btn-primary' id='hit'> Hit </button>
+					<button type='button' class='btn btn-primary' id='stand'>Stand</button>
+
+        	<!--<div class='btn btn-primary' id='stand'>Stand</div>-->
+    	</div>
+			<div class='clear'></div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<b>0xJack Game Credits Balance</b><br />
+			<span id='money' class='money'><script></script></span> <br/><br/>
+		</div>
+
+	<div class="col">
+    		<b>Your Bet</b><br />
+    		<div id='bet' class='bet money'>0</div>
+
+    		<div>
+					<button type='button' class='btn btn-danger btn-sm' id='less'>-</button>
+        	<button type='button' class='btn btn-success btn-sm' id='more'>+</button>
+	    	</div>
+    		<div class='clear'></div>
+
+</div>
+
+
+					<div class="col">
+						<b>Your wallet</b><br/>
+						Address: </br> <span id='wallet-address'></span> <br/><br/>
+
+						Balance: </br><span id='eth-balance' class='money'> </span> ETH
+
+					</div>
+				</div>
+			</div>
+
+
+        <div id='message' class='message'></div>
+				<div class="container">
+				<div class="row">
+				<div class="col">
+					<b>Buy Credits</b></br></br>
+					<button class='btn btn-info' id='buy-50'>50</button>
+					<button class='btn btn-info' id='buy-100'>100</button>
+					<button class='btn btn-info' id='buy-500'>500</button>
+					<button class='btn btn-info' id='buy-1000'>1000</button>
+				</div>
+				<div class="col"></div>
+				<div class="col">
+					<b>ETH Out </b> </br></br>
+					<button class='btn btn-warning' id='eth-out'>Claim Ξ</button>
+			</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+			</div>
+			<div class="col">
+				<b>Transactions: </b></br>
+
+				<div id='transactions' ></div>
+			</div>
+
+
+
+			<div class="col"></div>
+			</div>
+		</div>
+		</div>
+    </div> <!--page-->
+		<footer class="footer" style="background-color: #fbdddd">
+		      <div class="container">
+		        <span class="text-muted">Powered by 0x and Aqueduct. Built by Alice Man@ETHDenver 2018</span>
+		      </div>
+		</footer>
+		<!--Built on top of https://github.com/tonyspiro/blackjack GNU Public license-->
+
+</body>
+</html>
